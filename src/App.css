@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a202c; /* Dark background */
+    color: white; /* Default text color */
+  }
+  
+  /* Calendar Container */
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: #1a202c;
+  }
+  
+  /* Calendar Box */
+  .calendar-box {
+    background: #2d3748; /* Darker gray for calendar background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 700px;
+    width: 100%;
+  }
+  
+  /* Calendar Header */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-header button {
+    background: #4a5568;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .calendar-header button:hover {
+    background: #718096;
+  }
+  
+  /* Month and Year Title */
+  .calendar-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Weekdays */
+  .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    color: #a0aec0; /* Lighter gray */
+    margin-bottom: 10px;
+  }
+  
+  .weekdays div {
+    font-weight: bold;
+  }
+  
+  /* Days Grid */
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .days-grid div {
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .days-grid div:hover {
+    background: #4a5568;
+    transform: scale(1.05);
+  }
+  
+  /* Weekend Highlight */
+  .days-grid .weekend {
+    background: #2c5282; /* Blue background for weekends */
+    color: white;
+  }
+  
+  /* Current Day Highlight */
+  .days-grid .current-day {
+    background: #38b2ac; /* Teal background */
+    color: white;
+    box-shadow: 0 0 10px rgba(56, 178, 172, 0.8);
+  }
+  
+  /* Selected Day Highlight */
+  .days-grid .selected-day {
+    background: #63b3ed; /* Light blue */
+    color: white;
+    border: 2px solid #3182ce;
+    box-shadow: 0 0 10px rgba(99, 179, 237, 0.8);
+  }
+  
+  /* Empty Days Placeholder */
+  .days-grid .empty-day {
+    pointer-events: none;
+  }
+  
+  /* Event Form */
+  .event-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .event-form-container {
+    background: #2d3748;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+  }
+  
+  .event-form-container h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .event-form-container input,
+  .event-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #4a5568;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .event-form-container input:focus,
+  .event-form-container textarea:focus {
+    outline: none;
+    border: 2px solid #3182ce;
+  }
+  
+  .event-form-container button {
+    background: #63b3ed;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .event-form-container button:hover {
+    background: #4299e1;
+  }
+  
+  .event-form-container .cancel-button {
+    background: #e53e3e; /* Red background for cancel button */
+  }
+  
+  .event-form-container .cancel-button:hover {
+    background: #c53030;
+  }
+  
