@@ -1,6 +1,7 @@
 import { memo, useContext, useEffect, useState } from "react";
 import { EventContext } from "../context/EventContext";
 import { motion } from "framer-motion";
+import EventAccordian from "./EventAccordian";
 
 const Calendar = () => {
   const { events, setEvents, addEvent } = useContext(EventContext);
@@ -125,7 +126,7 @@ const Calendar = () => {
           </h2>
         </div>
         <ul className="space-y-3">
-          {selectedDayEvents.length ? (
+          {/* {selectedDayEvents.length ? (
             selectedDayEvents.map((event, index) => (
               <li
                 key={index}
@@ -145,14 +146,15 @@ const Calendar = () => {
             ))
           ) : (
             <p className="text-sm">No events for this day</p>
-          )}
+          )} */}
+          <EventAccordian/>
         </ul>
-        <button
+        {/* <button
           onClick={() => setClickEvent(true)}
           className="mt-6 bg-[#3c9d7e] py-2 px-4 rounded-md hover:bg-[#2c7b5d]"
         >
           + Add Event
-        </button>
+        </button> */}
       </div>
 
       {/* Right Section */}
